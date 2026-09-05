@@ -18,8 +18,8 @@ print("""
 """)
 
 
-# 1. Configuration
-target_url = input("WEB : ")  # Replace with your target URL
+
+target_url = input("WEB : ")  
 wordlist_file = "xss_list.txt"
 
 driver = webdriver.Chrome()
@@ -40,7 +40,7 @@ def handle_alerts():
     except NoAlertPresentException:
         return None
 
-# Lock target input element via XPath
+
 target_element = None
 target_xpath = ""
 
@@ -65,7 +65,7 @@ while True:
         pass
     time.sleep(0.5)
 
-# Save baseline text safely after handling initial alerts
+
 driver.get(target_url)
 time.sleep(2)
 handle_alerts()
@@ -147,16 +147,16 @@ try:
         print(f"\n--------------------------------------------------")
         print(f"[*] [{line_number}/{len(lines)}] Testing target line: '{text_to_type}'")
 
-        # Reload page
+      
         driver.get(target_url)
         time.sleep(1.5)
         handle_alerts()
 
-        # Refill saved extra fields
+
         if saved_extra_inputs:
             fill_extra_inputs(saved_extra_inputs)
 
-        # Insert payload into target element
+
         try:
             target_el = driver.find_element("xpath", target_xpath)
             target_el.clear()
@@ -168,7 +168,7 @@ try:
         submit_form()
         time.sleep(2)
 
-        # Check for triggered alert or text change
+
         triggered_alert = handle_alerts()
         
         try:
