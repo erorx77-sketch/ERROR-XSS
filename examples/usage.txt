@@ -1,0 +1,12 @@
+##start
+cd ERROR-XSS
+python xss.py
+
+##The tool began to be used
+http://example.com 
+Select the (input) you want to test on
+
+##Temporary
+Press Enter in the Terminal or cmd to stop.
+If you want to fill in other fields manually, they will be saved.
+To resume, press Enter.
