@@ -1,3 +1,4 @@
+![ERROR-XSS Demo](screenshot.png)
 # ERROR-XSS
 
 Simple XSS testing tool designed for educational purposes.
